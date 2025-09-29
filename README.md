@@ -85,4 +85,28 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 
+⚙️ Environment Variables
 
+Create a .env file in the root directory:
+
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+SECRET_KEY=your_random_secret_key
+SESSION_COOKIE_NAME=fastapi_session
+BASE_URL=http://localhost:8000
+ALLOWED_ORIGINS=http://localhost:3000
+
+🚀 Running the App
+uvicorn app.main:app --reload
+
+🧪 Testing the Flow
+
+- Open browser and go to: http://localhost:8000/api/v1/auth/login
+
+- Authenticate with Google
+
+- You’ll be redirected back and your session will be stored
+
+- Test /api/v1/auth/me to get user info
+
+- Use /api/v1/auth/logout to clear the session
