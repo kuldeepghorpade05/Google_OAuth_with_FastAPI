@@ -1,0 +1,12 @@
+# FastAPI & Core
+fastapi
+uvicorn[standard]
+authlib
+python-dotenv
+
+# Pydantic - let pip resolve compatible versions
+pydantic
+pydantic-settings
+
+# Other dependencies
+python-multipart
